@@ -272,3 +272,36 @@ header .icons-nav a:hover{
 .btn:hover{
     background-color: #89a4d5;
 }
+.footer .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    color: black; 
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color: rgb(121, 121, 121);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}    
+.footer .box-container .box a:hover{
+    display: block;
+    color: #333;;
+    text-decoration: underline;
+}    
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1rem;
+    color:black;
+    border-top: .1 rem solid rgba(0, 0, 0, .1);
+}
