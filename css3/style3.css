@@ -351,7 +351,7 @@ section{
 .login-container .login-text{
     position: relative;
     width: 100%;
-    color:#ffffff
+    color:#ffffff;
 }
 .login-container .login-text h2{
     margin: 0 0 15px 0;
