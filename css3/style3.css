@@ -12,8 +12,51 @@ html{
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
+header{
+    position: fixed;
+    width: 100%;
+    padding:2rem 9%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.15em 0.5em 1em rgba(31, 31, 31, 0.353);
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(35, 35, 35);
+}
+header .navbar a:hover{
+    color: #65c477;
+}
+.logo img{
+    width: 100px;
+}
+header .icons-nav a{
+    font-size: 2.5rem;
+    color:#333;
+    margin-left: 1.5rem;
+}
+header .icons-nav a:hover{
+    color:  #65c477;
+}
+header input, label{
+    display: none;
+    background-color: red;
+    opacity: 0;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:black;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
 section{
-    padding: 2rem 9%
+    padding: 2rem 9%;
 }
 .btn-beige{
     display: inline-block;
@@ -51,36 +94,6 @@ section{
     padding: 1rem 0;
     margin: 2rem 0;
     background-color: #ddd6cf;
-}
-header{
-    position: fixed;
-    top:-30px; left:0; right:0;
-    padding:2rem 9%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    box-shadow: 0.15em 0.5em 1em rgba(31, 31, 31, 0.353);
-}
-header .navbar a{
-    font-size: 2rem;
-    padding: 0 1.5rem;
-    color: rgb(35, 35, 35);
-}
-header .navbar a:hover{
-    color: #65c477;
-}
-.logo img{
-    width: 100px;
-}
-header .icons-nav a{
-    font-size: 2.5rem;
-    color:#333;
-    margin-left: 1.5rem;
-}
-header .icons-nav a:hover{
-    color:  #65c477;
 }
 .home{
     display: flex;
@@ -430,3 +443,59 @@ header .icons-nav a:hover{
     color: #ffffff;
     box-shadow: inset 250px 0 0 0 #65c477;
 }    
+/*media queries*/
+@media (max-width:959px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    .home .content{
+        width: 100%;
+    }    
+}
+@media (max-width:740px){
+    .fa-bars{
+        display: block;
+    }
+    header{
+        flex-direction: column;
+    }    
+    header .navbar{
+        position:absolute;
+        top:100%; left: 0; right:0;
+        background: #eee;
+        border-top: .1rem solid #333;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        width: 100%;
+    }
+    header #toggler:checked  ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header input, label{
+        opacity: 1;
+    }
+    header .navbar a{
+        margin: 1.5em;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+    .products-yado .box-container{
+        flex-direction: column;
+    }    
+    .newsletter-container{
+        grid-template-columns: 1fr;
+    }
+    .input-container{
+        margin: 0;
+    } 
+    .input-container .field-text{
+        width: 100%;
+    }   
+    .input-container .btn{
+        right: 100px;
+    }    
+}
