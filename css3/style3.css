@@ -44,7 +44,6 @@ header .icons-nav a:hover{
 }
 header input, label{
     display: none;
-    background-color: red;
     opacity: 0;
 }
 header .fa-bars{
