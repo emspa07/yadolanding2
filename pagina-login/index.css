@@ -1,3 +1,11 @@
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Antic Didone', serif;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
 .login-box{
     margin: auto;
     width: 100%;
@@ -125,16 +133,18 @@
     box-shadow: inset 250px 0 0 0 #65c477;
 }   
 .footer .box-container{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 2rem 50px;
 }
 .footer .box-container .box{
-    flex: 1 1 25rem;
+    display: flex;
+    flex-direction: column;
 }
 .footer .box-container .box h3{
     color: black; 
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 1rem 0;
 }
 .footer .box-container .box a{
@@ -153,7 +163,8 @@
     padding: 1.5rem;
     margin-top: 1.5rem;
     padding-top: 2.5rem;
-    font-size: 1rem;
+    font-size: .80rem;
+    font-family: 'Antic Didone', serif;
     color:black;
     border-top: .1 rem solid rgba(0, 0, 0, .1);
 }
