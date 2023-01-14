@@ -389,8 +389,7 @@
         grid-template-columns: 1fr;
     }
     .input-container .btn{
-        right: 300px;
-        bottom: -12172px;
+    display: none;
     }
     .footer .box-container{
         grid-template-columns: 1fr;
