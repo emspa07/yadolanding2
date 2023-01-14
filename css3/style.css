@@ -1,58 +1,98 @@
 *{
-    margin:0; padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Antic Didone', serif;
-    outline: none; border: none;
-    text-decoration: none;
-    transition: .2s linear;
 }
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    overflow-x: hidden;
+body {
+    font-family: 'Antic Didone', serif;
+    padding: 90px 20px 0;
 }
 header{
+    background-color: rgb(247, 248, 249);
+    height: 80px;
     position: fixed;
     width: 100%;
-    padding:2rem 9%;
-    background: #fff;
+    top: 0;
+    left: 0;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto;
+}
+.logo{
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+.navbar{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    box-shadow: 0.15em 0.5em 1em rgba(31, 31, 31, 0.353);
+    margin-right: 40px;
+    list-style: none;
 }
-header .navbar a{
-    font-size: 2rem;
-    padding: 0 1.5rem;
-    color: rgb(35, 35, 35);
+.nav-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    width:max-content;
 }
-header .navbar a:hover{
+.nav-bar-link{
+    color:black;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.nav-bar-link:hover{
     color: #65c477;
+    transition: 0.5s;
 }
-.logo img{
-    width: 100px;
-}
-header .icons-nav a{
-    font-size: 2.5rem;
+.icons-nav a{
+    font-size: 18px;
     color:#333;
-    margin-left: 1.5rem;
+    text-decoration: none;
+    margin: 0 10px;
+    line-height: 80px;
+    width:max-content;
 }
-header .icons-nav a:hover{
+.icons-nav a:hover{
     color:  #65c477;
 }
-header input, label{
-    display: none;
-    opacity: 0;
-}
-header .fa-bars{
-    font-size: 3rem;
-    color:black;
-    border-radius: .5rem;
-    padding: .5rem 1.5rem;
+.nav-toggle {
+    color: black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20 px;
+    line-height: 60px;
     cursor: pointer;
-    border: .1rem solid rgba(0, 0, 0, .3);
+  
+    display:none;
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/assets/pexels-gergő-køvács-4938804.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    width: 100%;
+}
+.home .content h1{
+    max-width: 1.5rem;
+    font-size: 10rem;
+    color:black;
+    line-height: 2;  
+}
+.home .content h2{
+    color: rgb(121, 121, 121);
+    font-size: 3.5rem;
+    padding-right: 650px;
+    padding-left: 1rem;
+    line-height: 1.5;
 }
 section{
     padding: 2rem 9%;
@@ -88,35 +128,6 @@ section{
     font-size: 3rem;
     color:black;
     background: #eee;
-}
-.newsletter{
-    padding: 1rem 0;
-    margin: 2rem 0;
-    background-color: #ddd6cf;
-}
-.home{
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: url(./assets/pexels-gergő-køvács-4938804.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.home .content{
-    width: 100%;
-}
-.home .content h1{
-    max-width: 1.5rem;
-    font-size: 10rem;
-    color:black;
-    line-height: 2;  
-}
-.home .content h2{
-    color: rgb(121, 121, 121);
-    font-size: 3.5rem;
-    padding-right: 650px;
-    padding-left: 1rem;
-    line-height: 1.5;
 }
 .about .icons-container{
     background: #eee;
@@ -214,6 +225,11 @@ section{
     color:#333;
     font-weight: bolder;
     padding-top: 1rem;
+}
+.newsletter{
+    padding: 1rem 0;
+    margin: 2rem 0;
+    background-color: #ddd6cf;
 }
 .newsletter-container{
     display: grid;
@@ -319,32 +335,49 @@ section{
 }
 /*media queries*/
 @media screen and (max-width:740px){
-    .fa-bars{
-        display: block;
+    body{
+    padding-top: 70px;
     }
     header{
+    height:60px;
+    }
+    .logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    .navbar{
         flex-direction: column;
-    }    
-    header .navbar{
-        position:absolute;
-        top:100%; left: 0; right:0;
-        background: #eee;
-        border-top: .1rem solid #333;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        align-items: center;
+        margin-right: 40px;
+        list-style: none;
+        background-color: #fffcf5;
+        position: fixed;
+        left: 0;
+        top: 60px;
         width: 100%;
+        padding-left: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
     }
-    header #toggler:checked  ~ .navbar{
-        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    .nav-item{
+        line-height: 70px;
     }
-    header input, label{
-        opacity: 1;
+    .nav-bar-link:hover{
+        color: #65c477;
     }
-    header .navbar a{
-        margin: 1.5em;
-        padding: 1.5rem;
-        background: #fff;
-        border: .1rem solid rgba(0, 0, 0, .1);
-        display: block;
+    .nav-toggle {
+    display: block;
+    }
+    .navbar_visible{
+        left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
     }
     .products-yado .box-container{
         flex-direction: column;
