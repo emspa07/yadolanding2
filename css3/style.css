@@ -13,13 +13,13 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
   }
   nav{
   display: flex;
   justify-content: space-between;
   max-width: 992px;
   margin: 0 auto;
-  z-index: 1000;
   }
   .logo{
     color:black;
@@ -86,7 +86,7 @@
     max-width: 1.5rem;
     font-size: 10rem;
     color:black;
-    line-height: 2;  
+    line-height: 1.5;  
   }
   .home .content h2{
     color: rgb(121, 121, 121);
@@ -100,13 +100,13 @@
   }
   .btn-beige{
     display: inline-block;
-    margin-top: 5rem;
+    margin-top: 2rem;
     border-radius: 5rem;
     background: #5e76b9;
     color:#fff;
-    padding: .9rem 3.5rem;
+    padding: .3rem 1rem;
     cursor: pointer;
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-decoration: none;
   }
   .btn-beige:hover{
@@ -114,13 +114,13 @@
   }
   .btn-green{
     display: inline-block;
-    margin-top: 5rem;
+    margin-top: 2rem;
     border-radius: 5rem;
     background: #65c477;
     color:#fff;
-    padding: .9rem 3.5rem;
+    padding: .3rem 1rem;
     cursor: pointer;
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-decoration: none;
   }
   .btn-green:hover{
@@ -128,7 +128,7 @@
   }
   .about{
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.7rem;
     color:black;
     background: #eee;
   }
@@ -160,11 +160,11 @@
   .icons-container .icons span{
     color: #555;
     padding-bottom: .5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .products-yado .head-yado{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color:black;
     padding: 1rem;
     margin: 2rem 0;
@@ -202,7 +202,7 @@
   .products-yado .box-container .box .image .icons-products a{
     height: 5rem;
     line-height: 5rem;
-    font-size:2rem;
+    font-size: 1.5rem;
     width: 50%;
     background: #65c477;
     color: #fff;
@@ -253,7 +253,7 @@
   }
   .newsletter-submit h3{
     display: block;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-block-start: .5em;
     margin-block-end: .5em;
@@ -262,7 +262,7 @@
   }
   .newsletter-container .newsletter-submit p{
     display:block;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-block-start: .5em;
     margin-block-end: .5;
     margin-inline-start: 0px;
@@ -273,25 +273,16 @@
   .input-container{
     display: flex;
     justify-content: end;
-    width: 50%;
-    margin: -25rem auto 21rem 77rem;
-  }
-  .field-text {
-    width: 88%;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    height: 40px;
-    font-size: 1.1rem;
-    margin-right: 20px;
+    width: 100%;
   }
   .input-container .btn{
     position: absolute;
-    border-radius:3px 8px 8px 3px;
+    border-radius: 50% 20% / 10% 40%;
     background-color: #65c477;
     color: #fff;
-    height: 30px;
-    right: 10px;
+    height: 40px;
+    right: 300px;
+    margin-top: -150px;
     padding: 10px 30px 30px 5px;
     border: none;
     cursor: pointer;
@@ -306,39 +297,42 @@
     background-color: #89a4d5;
   }
   .footer .box-container{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  .footer .box-container .box{
-    flex: 1 1 25rem;
-  }
-  .footer .box-container .box h3{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 2rem 50px;
+}
+.footer .box-container .box{
+    display: flex;
+    flex-direction: column;
+}
+.footer .box-container .box h3{
     color: black; 
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1rem 0;
-  }
-  .footer .box-container .box a{
+}
+.footer .box-container .box a{
     display: block;
     color: rgb(121, 121, 121);
     font-size: 1.5rem;
     padding: 1rem 0;
     text-decoration: none;
-  }    
-  .footer .box-container .box a:hover{
+}    
+.footer .box-container .box a:hover{
     display: block;
     color: #333;;
     text-decoration: underline;
-  }    
-  .footer .credit{
+}    
+.footer .credit{
     text-align: center;
     padding: 1.5rem;
     margin-top: 1.5rem;
     padding-top: 2.5rem;
-    font-size: 1rem;
+    font-size: .80rem;
+    font-family: 'Antic Didone', serif;
     color:black;
     border-top: .1 rem solid rgba(0, 0, 0, .1);
-  }
+}
   
   @media (max-width:740px){
     body{
@@ -385,19 +379,20 @@
     .nav-toggle:focus:not(:focus-visible){
       outline: none;
     }
+    .home .content h2{
+    font-size: 2.5rem;
+    }
     .products-yado .box-container{
-      flex-direction: column;
-  }    
-  .newsletter-container{
-      grid-template-columns: 1fr;
-  }
-  .input-container{
-      margin: 0;
-  } 
-  .input-container .field-text{
-      width: 100%;
-  }   
-  .input-container .btn{
-      right: 100px;
-  }
+        flex-direction: column;
+    }    
+    .newsletter-container{
+        grid-template-columns: 1fr;
+    }
+    .input-container .btn{
+        right: 300px;
+        bottom: -12172px;
+    }
+    .footer .box-container{
+        grid-template-columns: 1fr;
+    }
   }
