@@ -1,65 +1,66 @@
 *{
     margin: 0;
     box-sizing: border-box;
-}
-body {
+  }
+   body {
     font-family: 'Antic Didone', serif;
     padding: 90px 20px 0;
-}
-header{
+  }
+  header{
     background-color: rgb(247, 248, 249);
     height: 80px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-}
-nav{
+  }
+  nav{
   display: flex;
   justify-content: space-between;
   max-width: 992px;
   margin: 0 auto;
-}
-.logo{
+  z-index: 1000;
+  }
+  .logo{
     color:black;
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
     padding: 0 40px;
     line-height: 80px;
-}
-.navbar{
+  }
+  .navbar{
     display: flex;
     margin-right: 40px;
     list-style: none;
-}
-.nav-item{
+  }
+  .nav-item{
     font-size: 18px;
     margin: 0 10px;
     line-height: 80px;
     width:max-content;
-}
-.nav-bar-link{
+  }
+  .nav-bar-link{
     color:black;
     text-decoration: none;
     padding: 8px 12px;
-}
-.nav-bar-link:hover{
+  }
+  .nav-bar-link:hover{
     color: #65c477;
     transition: 0.5s;
-}
-.icons-nav a{
+  }
+  .icons-nav a{
     font-size: 18px;
     color:#333;
     text-decoration: none;
     margin: 0 10px;
     line-height: 80px;
     width:max-content;
-}
-.icons-nav a:hover{
+  }
+  .icons-nav a:hover{
     color:  #65c477;
-}
-.nav-toggle {
+  }
+  .nav-toggle {
     color: black;
     background: none;
     border: none;
@@ -69,35 +70,35 @@ nav{
     cursor: pointer;
   
     display:none;
-}
-.home{
+  }
+  .home{
     display: flex;
     align-items: center;
     min-height: 100vh;
     background: url(/assets/pexels-gergő-køvács-4938804.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-}
-.home .content{
+  }
+  .home .content{
     width: 100%;
-}
-.home .content h1{
+  }
+  .home .content h1{
     max-width: 1.5rem;
     font-size: 10rem;
     color:black;
     line-height: 2;  
-}
-.home .content h2{
+  }
+  .home .content h2{
     color: rgb(121, 121, 121);
     font-size: 3.5rem;
     padding-right: 650px;
     padding-left: 1rem;
     line-height: 1.5;
-}
-section{
+  }
+  section{
     padding: 2rem 9%;
-}
-.btn-beige{
+  }
+  .btn-beige{
     display: inline-block;
     margin-top: 5rem;
     border-radius: 5rem;
@@ -106,11 +107,12 @@ section{
     padding: .9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7em;
-}
-.btn-beige:hover{
+    text-decoration: none;
+  }
+  .btn-beige:hover{
     background: #333;;
-}
-.btn-green{
+  }
+  .btn-green{
     display: inline-block;
     margin-top: 5rem;
     border-radius: 5rem;
@@ -119,135 +121,137 @@ section{
     padding: .9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7em;
-}
-.btn-green:hover{
+    text-decoration: none;
+  }
+  .btn-green:hover{
     background: #333;
-}
-.about{
+  }
+  .about{
     text-align: center;
     font-size: 3rem;
     color:black;
     background: #eee;
-}
-.about .icons-container{
+  }
+  .about .icons-container{
     background: #eee;
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
-}
-.icons-container .icons{
+  }
+  .icons-container .icons{
     background: #fff;
     border: .1rem solid rgba(31, 31, 31, 0.353);
     padding: 2rem;
     display: flex;
     align-items: center;
     flex: 1 1 25rem;
-}
-.icons-container .icons img{
+  }
+  .icons-container .icons img{
    height: 5rem;
    margin-right: 2rem;
-}
-.icons-container .icons h3{
+  }
+  .icons-container .icons h3{
     color: #333;
     padding-bottom: .5rem;
     font-size: 1.5rem;
-}
-.icons-container .icons span{
+  }
+  .icons-container .icons span{
     color: #555;
     padding-bottom: .5rem;
     font-size: 1.3rem;
-}
-.products-yado .head-yado{
+  }
+  .products-yado .head-yado{
     text-align: center;
     font-size: 4rem;
     color:black;
     padding: 1rem;
     margin: 2rem 0;
     background: #e4f0f7;
-}
-.products-yado .box-container{
+  }
+  .products-yado .box-container{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}        
-.products-yado .box-container .box{
+  }        
+  .products-yado .box-container .box{
     flex: 1 1 -10rem;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     border-radius: .5rem;
     border: .1rem solid rgba(0, 0, 0, .1);
     position: relative;
-}
-.products-yado .box-container .box .image{
+  }
+  .products-yado .box-container .box .image{
     position:relative;
     text-align: center;
     padding-top: 2rem;
     overflow:hidden;
-}
-.products-yado .box-container .box .image img{
+  }
+  .products-yado .box-container .box .image img{
     height: 25rem;
-}
-.products-yado .box-container .box:hover .image img{
+  }
+  .products-yado .box-container .box:hover .image img{
     transform: scale(1.1);
-}*/
-.products-yado .box-container .box .image .icons{
+  }
+  .products-yado .box-container .box .image .icons{
     position: absolute;
     bottom: 0; left: 0; right: 0;
     display: flex;
-}            
-.products-yado .box-container .box .image .icons-products a{
+  }            
+  .products-yado .box-container .box .image .icons-products a{
     height: 5rem;
     line-height: 5rem;
     font-size:2rem;
     width: 50%;
     background: #65c477;
     color: #fff;
-}
-.products-yado .box-container .box .image .icons-products .cart-btn{
+    text-decoration: none;
+  }
+  .products-yado .box-container .box .image .icons-products .cart-btn{
     border-radius: .3rem;
     padding: .1rem .4rem;
-}
-.products-yado .box-container .box .image .icons-products a:hover{
+  }
+  .products-yado .box-container .box .image .icons-products a:hover{
     background:#89a4d5;
-}
-.products-yado .box-container .box .products-content{
+  }
+  .products-yado .box-container .box .products-content{
     padding: 2rem;
     text-align: center;
-
-}
-.products-yado .box-container .box .products-content h3{
+  
+  }
+  .products-yado .box-container .box .products-content h3{
     font-size: 1.5rem;
     color:black;
-}    
-.products-yado .box-container .box .products-content .price{
+  }    
+  .products-yado .box-container .box .products-content .price{
     font-size: 2rem;
     color:#333;
     font-weight: bolder;
     padding-top: 1rem;
-}
-.newsletter{
+  }
+  .newsletter{
     padding: 1rem 0;
     margin: 2rem 0;
     background-color: #ddd6cf;
-}
-.newsletter-container{
+  }
+  .newsletter-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 1rem;
-}
-.newsletter-container .newsletter-content img{
+  }
+  .newsletter-container .newsletter-content img{
     width: 100%;
     align-items: left;
-}
-.newsletter-submit{
+  }
+  .newsletter-submit{
     display: flex;
     gap: 1rem;
     align-items: center;
     flex-direction: column;
     padding: 30px;
-}
-.newsletter-submit h3{
+  }
+  .newsletter-submit h3{
     display: block;
     font-size: 5rem;
     font-weight: bold;
@@ -255,8 +259,8 @@ section{
     margin-block-end: .5em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-}
-.newsletter-container .newsletter-submit p{
+  }
+  .newsletter-container .newsletter-submit p{
     display:block;
     font-size: 2rem;
     margin-block-start: .5em;
@@ -265,14 +269,14 @@ section{
     margin-inline-end: 0px;
     align-items: center;
     padding-left: 5rem;
-}
-.input-container{
+  }
+  .input-container{
     display: flex;
     justify-content: end;
     width: 50%;
     margin: -25rem auto 21rem 77rem;
-}
-.field-text {
+  }
+  .field-text {
     width: 88%;
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
@@ -280,8 +284,8 @@ section{
     height: 40px;
     font-size: 1.1rem;
     margin-right: 20px;
-}
-.input-container .btn{
+  }
+  .input-container .btn{
     position: absolute;
     border-radius:3px 8px 8px 3px;
     background-color: #65c477;
@@ -296,35 +300,37 @@ section{
     font-weight: 600;
     transition: all 0.3s;
     text-align: center;
-}
-.btn:hover{
+    text-decoration: none;
+  }
+  .btn:hover{
     background-color: #89a4d5;
-}
-.footer .box-container{
+  }
+  .footer .box-container{
     display:flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-}
-.footer .box-container .box{
+  }
+  .footer .box-container .box{
     flex: 1 1 25rem;
-}
-.footer .box-container .box h3{
+  }
+  .footer .box-container .box h3{
     color: black; 
     font-size: 2.5rem;
     padding: 1rem 0;
-}
-.footer .box-container .box a{
+  }
+  .footer .box-container .box a{
     display: block;
     color: rgb(121, 121, 121);
     font-size: 1.5rem;
     padding: 1rem 0;
-}    
-.footer .box-container .box a:hover{
+    text-decoration: none;
+  }    
+  .footer .box-container .box a:hover{
     display: block;
     color: #333;;
     text-decoration: underline;
-}    
-.footer .credit{
+  }    
+  .footer .credit{
     text-align: center;
     padding: 1.5rem;
     margin-top: 1.5rem;
@@ -332,9 +338,9 @@ section{
     font-size: 1rem;
     color:black;
     border-top: .1 rem solid rgba(0, 0, 0, .1);
-}
-/*media queries*/
-@media screen and (max-width:740px){
+  }
+  
+  @media (max-width:740px){
     body{
     padding-top: 70px;
     }
@@ -342,56 +348,56 @@ section{
     height:60px;
     }
     .logo{
-        font-size: 25px;
-        padding: 0 20px;
-        line-height: 60px;
+      font-size: 25px;
+      padding: 0 20px;
+      line-height: 60px;
     }
     .navbar{
-        flex-direction: column;
-        align-items: center;
-        margin-right: 40px;
-        list-style: none;
-        background-color: #fffcf5;
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding-left: 20px 0;
-
-        height: calc(100% - 60px);
-        overflow-y: auto;
-
-        left: 100%;
-        transition: left 0.3s;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 40px;
+      list-style: none;
+      background-color: #fffcf5;
+      position: fixed;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      padding-left: 20px 0;
+  
+      height: calc(100% - 60px);
+      overflow-y: auto;
+  
+      left: 100%;
+      transition: left 0.3s;
     }
     .nav-item{
-        line-height: 70px;
+      line-height: 70px;
     }
     .nav-bar-link:hover{
-        color: #65c477;
+      color: #65c477;
     }
     .nav-toggle {
-    display: block;
+     display: block;
     }
     .navbar_visible{
-        left: 0;
+      left: 0;
     }
     .nav-toggle:focus:not(:focus-visible){
-        outline: none;
+      outline: none;
     }
     .products-yado .box-container{
-        flex-direction: column;
-    }    
-    .newsletter-container{
-        grid-template-columns: 1fr;
-    }
-    .input-container{
-        margin: 0;
-    } 
-    .input-container .field-text{
-        width: 100%;
-    }   
-    .input-container .btn{
-        right: 100px;
-    }    
-}
+      flex-direction: column;
+  }    
+  .newsletter-container{
+      grid-template-columns: 1fr;
+  }
+  .input-container{
+      margin: 0;
+  } 
+  .input-container .field-text{
+      width: 100%;
+  }   
+  .input-container .btn{
+      right: 100px;
+  }
+  }
